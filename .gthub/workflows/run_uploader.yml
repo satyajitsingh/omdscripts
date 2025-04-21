@@ -1,36 +1,47 @@
+# name: Upload Metadata to OpenMetadata (Windows)
+
+# on:
+#   workflow_dispatch:  # Manual trigger from GitHub UI
+
+# jobs:
+#   upload-metadata:
+#     runs-on: windows-latest
+
+#     env:
+#       OPENMETADATA_HOST: ${{ secrets.OPENMETADATA_HOST }}
+#       AUTH_TOKEN: ${{ secrets.OPENMETADATA_TOKEN }}
+#       EXCEL_FILE_PATH: metadata.xlsx
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v3
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.10'
+
+#       - name: Install Python dependencies
+#         run: |
+#           pip install --upgrade pip
+#           pip install -r requirements.txt
+
+#       - name: Create .env file for script
+#         run: |
+#           echo OPENMETADATA_HOST=%OPENMETADATA_HOST% > .env
+#           echo AUTH_TOKEN=%AUTH_TOKEN% >> .env
+#           echo EXCEL_FILE_PATH=%EXCEL_FILE_PATH% >> .env
+
+#       - name: Run Python script
+#         run: python upload_metadata.py
 name: Upload Metadata to OpenMetadata (Windows)
 
 on:
-  workflow_dispatch:  # Manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
-  upload-metadata:
+  test:
     runs-on: windows-latest
-
-    env:
-      OPENMETADATA_HOST: ${{ secrets.OPENMETADATA_HOST }}
-      AUTH_TOKEN: ${{ secrets.OPENMETADATA_TOKEN }}
-      EXCEL_FILE_PATH: metadata.xlsx
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install Python dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Create .env file for script
-        run: |
-          echo OPENMETADATA_HOST=%OPENMETADATA_HOST% > .env
-          echo AUTH_TOKEN=%AUTH_TOKEN% >> .env
-          echo EXCEL_FILE_PATH=%EXCEL_FILE_PATH% >> .env
-
-      - name: Run Python script
-        run: python upload_metadata.py
+      - name: Hello
+        run: echo Hello from GitHub Actions
