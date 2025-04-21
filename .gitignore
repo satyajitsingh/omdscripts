@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Python virtualenvs
+.env/
+.venv/
+venv/
+ENV/
+
+# Environment files
+.env
+.env.*
+
+# Excel or data files (optional — only if you don’t want to track them)
+# *.xlsx
+# *.xls
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and junk
+*.log
+*.bak
+*.tmp
+
+# VSCode or
