@@ -34,14 +34,14 @@
 
 #       - name: Run Python script
 #         run: python upload_metadata.py
-name: Upload Metadata to OpenMetadata (Windows)
+name: Test Workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  test:
+  hello:
     runs-on: windows-latest
     steps:
-      - name: Hello
-        run: echo Hello from GitHub Actions
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
